@@ -1,0 +1,657 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/x-twitter?f=brands&s=solid">
+    <title>USP INFO CLUB</title>
+    
+</head>
+<body>
+    <header>
+        <img src="IMG\logo-club info.jpg" alt="Logo du Club" >
+        <img src="IMG\WhatsApp Image 2023-12-10 à 14.32.16_c76b9a64.jpg" alt="USP ">
+        <h1>CLUB D'INFORMATIQUE DE L'UNIVERSITE DE SAN PEDRO </h1>
+        
+    </header>
+   
+    <div class="container">
+        <nav>
+            
+            <ul>
+
+                <li>
+                    <a href="#" id="menu">
+                        <button  class="btn1" onclick="rafraichirPage()">
+                            <i class="fa fa-home">
+                                home
+                            </i>
+                        </button>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <button class="btn1">
+                            <i class="fa fa-exclamation-triangle">
+                                Reglement du club 
+                            </i>
+                        </button>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <button class="btn1">
+                            <i class="fa fa-file-text">
+                                Projet
+                            </i>
+                        </button>
+                    </a>
+                </li>
+                
+                <li>
+                    <a  href="https://forms.gle/3WLyC9nz5o5CxBPw6" target="_blank">
+                         <button class="btn1" >
+                             <i class="fa fa-sign-in " >
+                             Inscription
+                             </i>
+                             
+                         </button>
+                     </a>
+                 </li>
+
+                
+<!--                <li> 
+                    <button class="btn1" id="displayform">S'INSCRIRE </button>
+                </li> -->
+                
+                
+                
+<!--                <li><a href="#"><button id="ouvrirFormulaire" onclick="ouvrirGoogleForm()" class="btn1"><i class="fa fa-exclamation-triangle">REGISTER HERE </i></button>
+                </a>
+                </li>-->
+            </ul>
+        </nav>
+        <div class="main-section">
+            <div class="sub-section" id="informations">
+              
+             <button class="btn1" onclick="afficherCacher('welcome')"  ><h2 >Informations</h2></button> 
+              <p id="welcome" class="paragraphe">Bienvenue au Club d'Informatique de l'universié de San Pedro (IC-USP)!
+
+                Nous sommes ravis de t'accueillir parmi nous et de te voir rejoindre notre communauté passionnée d'informatique. C'est un plaisir de t'avoir parmi les membres du club, et nous sommes impatients de partager et d'apprendre ensemble dans le monde fascinant de la technologie.
+      
+                Le Club d'Informatique est l'endroit idéal pour élargir tes connaissances, participer à des projets passionnants, et rencontrer d'autres personnes partageant les mêmes intérêts. Notre équipe dynamique est là pour t'aider à explorer les différentes facettes de l'informatique, que ce soit la programmation, le développement web, l'intelligence artificielle ou d'autres domaines.
+      
+                Si tu as des questions, des idées à partager, ou si tu souhaites simplement discuter de sujets liés à l'informatique, n'hésite pas à t'impliquer. Notre club est un espace inclusif où chacun peut contribuer et apprendre ensemble.</p>
+            </div>
+          
+            <div class="sub-section" id="projet">
+              
+                <button class="btn1" onclick="afficherCacher('project')" ><h2>Projet</h2></button>
+              <p id="project" class="paragraphe">Auncun projet pour l'instant</p>
+            </div>
+          
+            <div class="sub-section" id="activite">
+              
+                <button class="btn1" onclick="afficherCacher('activity')" ><h2>Activités</h2></button>
+              <p id="activity" class="paragraphe">Les activités débuterons bientôt, le programe des activités vous sera communiqué d'ici peu</p>
+            </div>
+          
+            <div class="sub-section" id="historique">
+                
+                <button class="btn1" onclick="afficherCacher('History')" ><h2>Historique</h2></button>
+              <p id="History" class="paragraphe"> .........</p>
+            </div>
+          </div>
+          
+        
+        
+ <!--       <section> Sction for refister and login form, it will upload after 
+            <div class="sec container">
+                <div class="form-wrapper">
+                    <div class="card">
+                        <div class="card-header">
+                            <div id="forlogin" class="form-header active" >Se connecter </div>
+                            <div id="forregister" class="form-header">S'inscrire</div>
+
+                        </div>
+                        <div action="traitement.php" class="card-body" id="formContainer" method="post">
+                            <form id="formlogin">
+                                <input type="text" class="form-control" placeholder="Nom d'utilisateur*" required>
+                                <input type="password" class="form-control" placeholder="@password*" required>
+                                <button class="formbutton" type="submit" >Connexion</button>
+                                
+                            </form>
+                          
+                            <form action="traitement.php" id="formregister" class="toggleform" method="post" onsubmit=afficherMessage()>
+                                <label for="sujet">Choisissez une option</label>
+                                
+                                <select class="form-control" name="Ecole ou filère" id="Filières" required>
+                
+                                    <option value="" disabled selected hidden>Votre filière</option>
+                                <option value="PREPA">Classe preparatoire</option>
+                                <option value="UFR SCIENCE DE LA MER">SDM</option>
+                                <option value="UFR AGRICULTURE">ARHAI</option>
+                                <option value="UFR TOURISME">TES</option>
+                                <option value="EIBTP">BTP</option>
+                                <option value="EICN">CN</option>
+                                <option value=""></option>
+                                </select>
+                                
+                                <label for="sujet">choisissez une option</label>
+                                
+                                <select class="form-control" name="Ecole ou filère" id="Niveau" required>
+                                <option value="" disabled selected hidden>Votre Niveau </option>
+                                <option name ="" value="1ère Année">Prépa 1/Licence 1</option>
+                                <option  value="2ème Année">Licence 2</option>
+                                <option value="3e Année">Prépa 2/Licence 3</option>
+                                <option  value="ing1">ING 1</option>
+                                <option  value="ing2">ING 2</option>
+                                </select>
+                                <input type="text" name="nom" class="form-control" placeholder="NOM *" required>
+                                <input type="text" name="prenom" class="form-control" placeholder="PRENOM *" required> 
+                                <input type="email" name="email" class="form-control" placeholder="Votre e-mail *" required> 
+                                <input type="password" name="password" class="form-control" placeholder="Azerty" minlength="8">                         
+                                <button class="formbutton" type="submit">Inscription</button>
+                                <div id="message"></div>
+                                <span>Dont share this form it will be upload after for register please follow the link on the home page  </span>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+  <!--       <section id="formulaireSection">  we will upload it also after suggestion   
+
+        </section>-->
+        
+    </div>
+    
+    <div id="consoleOutput"></div>
+   
+    
+    
+    <script>
+        const displayform=_('displayform');
+        const forlogin =_('forlogin');
+        const formlogin=_('formlogin');
+        const forregister =_('forregister');
+        const formregister =_('formregister');
+        const formContainer =_('formContainer');
+        const formbutton =_('formbutton')
+        displayform.addEventListener('click',showform)
+       
+       
+        forlogin.addEventListener('click', () => {
+            forlogin.classList.add('active');
+                forregister.classList.remove('active');
+                if(formlogin.classList.contains('toggleform')){
+                    formContainer.style.transform = 'translate(0%)';
+                    formContainer.style.transition = 'transform .5s';
+                    formregister.classList.add('toggleform');
+                    formlogin.classList.remove('toggleform');
+            }
+        });
+        
+        forregister.addEventListener('click', () => {
+            
+                forlogin.classList.remove('active');
+                forregister.classList.add('active');
+                if(formregister.classList.contains('toggleform')){
+                    formContainer.style.transform = 'translate(-100%)';
+                    formContainer.style.transition = 'transform .3s';
+                    formregister.classList.remove('toggleform');
+                    formlogin.classList.add('toggleform');
+            }
+        });        
+        
+        function _(e) {
+            return document.getElementById(e);
+        }
+        
+        function showform() {
+            document.querySelector('.form-wrapper .card').classList.toggle('show');
+        }
+        
+        
+        formregister.addEventListener("submit", function(event){
+            event.preventDefault();
+            var nom = document.getElementsByName("nom")[0].value;
+            var prenom = document.getElementsByName("prenom")[0].value;
+            var email = document.getElementsByName("email")[0].value;
+            var selectedValue1 = _("Niveau").value;
+            var selectedValue2 = _("Filières").value;
+            
+            console.group('Inscription');
+            console.log("Nom :", nom);
+            console.log("Prenom :", prenom);
+            console.log("Email :", email);
+            console.log("Niveau :", selectedValue1 );
+            console.log("Filière :", selectedValue2);
+            console.groupEnd();
+            var consoleOutput = _("consoleOutput");
+            var consoleMessages = consoleOutput.innerText;
+            consoleOutput.innerHTML = consoleMessages.replace(/\n/g, "<br>");
+        })
+        
+        formregister.addEventListener("submit", function(event){
+            event.preventDefault();
+            afficherMessage();
+        });
+        function afficherMessage(){
+            var messageElement = document.getElementById('message');
+            messageElement.innerHTML = 'Merci pour votre insciption'
+
+        }
+        function disableSubmitButton(){
+            document.getElementById('submitBtn').disabled= true;
+        } //
+        
+        document.getElementById('home').addEventListener('click', function() {
+            document.getElementById('accueil').style.display = 'block';
+            document.getElementById('contactez-nous').style.display = 'none';
+            document.getElementById('inscrivez-vous').style.display ='none';
+            document.getElementById('connectez-vous').style.display ='none';
+        });
+
+        document.getElementById('contact').addEventListener('click', function() {
+            
+        });
+        document.getElementById('inscription').addEventListener('click', function() {
+            document.getElementById('accueil').style.display = 'none';
+            document.getElementById('contactez-nous').style.display = 'none';
+            document.getElementById('inscrivez-vous').style.display ='block';
+            document.getElementById('connectez-vous').style.display ='none';
+        });
+        document.getElementById('connexion').addEventListener('click', function() {
+        document.getElementById('accueil').style.display = 'none';
+        document.getElementById('contactez-nous').style.display = 'none';
+        document.getElementById('inscrivez-vous').style.display ='none';
+        document.getElementById('connectez-vous').style.display ='block';
+        });
+        // Fonction pour ouvrir le formulaire Google dans la section
+    function ouvrirGoogleForm() {
+        // Remplacez 'URL_DU_FORMULAIRE' par l'URL de votre formulaire Google
+        var urlFormulaire = 'https://forms.gle/a2Y7n7fQd3EAbgSB6';
+
+        // Obtient la référence de la section
+        var formulaireSection = document.getElementById('formulaireSection');
+
+        // Charge le formulaire Google dans la section en utilisant innerHTML
+        formulaireSection.innerHTML = '<iframe src="' + urlFormulaire + '" width="100%" height="600px" frameborder="0" marginheight="0" marginwidth="0">Chargement...</iframe>';
+    }
+    
+    
+
+
+  function rafraichirPage() {
+    // Rafraîchir la page
+    location.reload();}
+    
+
+    function afficherCacher(welcome) {
+  // Récupérer l'élément par son ID
+  var paragraphe = document.getElementById(welcome);
+
+  // Récupérer toutes les divs
+  var toutesLesDivs = document.querySelectorAll('.sub-section');
+
+  // Masquer les autres divs
+  toutesLesDivs.forEach(function(div) {
+    if (div.id !== welcome) {
+      div.classList.remove('visible');
+    }
+  });
+
+  // Changer la propriété display pour le faire apparaître ou disparaître
+  paragraphe.classList.toggle('visible');
+}
+
+    
+    
+    
+    
+    
+    </script> 
+    
+    <style>
+/* Styles spécifiques pour les appareils mobiles */
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0.625;
+  }
+}
+
+body{
+    background-color:#3498db ;
+}
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding:0 0.5;
+    background: linear-gradient(rgba(0,0,0, .4), transparent),  center center no-repeat;
+    background-size: cover;
+}
+header {
+    top: 0;
+    left: 0; 
+    padding: 0.938rem;
+    color: #fff;
+    text-align: left; /* Pour aligner le logo à droite, vous pouvez ajuster en conséquence */
+    background-color: rgba(32, 93, 207, 0.637);
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Aligner le contenu à l'extrémité opposée pour que le texte soit à gauche et le logo à droite */
+    align-items: center; /* Aligner verticalement au centre */
+    padding: 0.625;
+    z-index: 1000;
+    
+      
+}
+img{
+    width: 150px; /* Définir la largeur  */
+    height: auto; /* Garder le rapport hauteur/largeur d'origine */
+}
+
+
+nav {
+    
+    background-color:transparent;
+
+    padding: 0.006rem;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+.logo{
+    background-image: url('IMG\WhatsApp Image 2023-12-10 à 14.32.16_c76b9a64.jpg');
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    padding-right: 1.25rem;
+    text-align: right;
+    list-style: none;
+}
+
+nav ul li{
+    align-items: center;
+}
+nav ul li a{
+    padding: 0.625;
+    text-decoration: none;
+    color: #3498db;
+    font-size: 16px;
+
+}
+
+nav ul li a i {
+    color: white;
+    letter-spacing: 0.313;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.125 0;
+  }
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+}
+.form-wrapper .card {
+    width: 360px;
+    padding: 20px;
+    background-color: rgba(0 0 0/35%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibilyty .3s;
+
+
+}
+.card.show{
+    visibility: visible;
+    opacity: 1;
+}
+.card-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 20px 0;
+    font-size: 1.1rem;
+    color: #3498db;
+    box-shadow: 2px 3px 8px white;
+    border-radius: 50px;
+}
+.card-header .form-header {
+    flex: 50%;
+    text-align: center;
+    padding: 10px 0px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    
+    cursor: pointer;
+}
+
+.card-header .form-header.active {
+    box-shadow: inset 1px 1px 2px rgb(19 210 177/55%), inset 1px 1px 2px rgb(19 210 177/55%),1px 1px 2px rgb(19 210 177/55%),1px 1px 2px rgb(19 210 177/55%);
+        inset: 1px 1px 2px rgb(19 210 177/55%);
+        border-color: rgb(32, 51, 218);
+    transition: border-color .3s, box-shadow .3s;
+}
+
+.card-body{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 40px 0;
+    text-align: center;
+}
+
+form{
+    flex: 0 0 100%;
+}
+.toggleform{
+    visibility: hidden;
+    opacity: o;
+    transition: opacity .3s, visibility .3s;
+}
+.form-control{
+    width: 100%;
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgb(134 255 249/65%);
+    border-color: white;
+    outline: none;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    color: white;
+}
+.form-control::placeholder {
+    color: whitesmoke;
+}
+.formbutton {
+    border: 1px solid transparent;
+    padding: 1rem -3rem;
+    background-color:transparent    ;
+    border-radius: 50px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: transform .3s, boxshadow .3s;
+    
+
+}
+.formbutton:hover {
+    box-shadow: 1px 3px 115px transparent;
+    transform: translateY(-5px);
+}
+marquee {
+    color: goldenrod;
+}
+
+
+
+label{
+    color: white;}
+
+
+
+
+select.form-control {
+    background-color: #3498db ;
+    border-radius: 3.125rem
+    
+}
+div.message{
+    box-shadow: 1px 2px 5px;
+    background-color: goldenrod;
+}
+.btn1 {
+    background-color: transparent; /* Blue background */
+    border: none; /* Remove borders */
+    border-radius: 3.125rem;
+    color: white; /* White text */
+    padding: 0.75rem 1rem; /* Some padding */
+    font-size: 1rem; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    transition: background-color 0.3s;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn1:hover {
+    background-color: RoyalBlue;
+  }
+
+ /* button.btn{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style:oblique;
+    margin-top: 0;
+    background-color: transparent;
+    color: black;
+    border: 1px solid transparent;
+    transition: border-color .3s;
+ }
+button.btn:hover{
+    border-color: goldenrod;
+    transition: all;
+  }/* an other css class of our button if u want to use it just change zhe classe of our button in the html files 
+
+  */
+h1{
+    font-family: "Times New Roman", sans-serif;
+    /* Vous pouvez également spécifier d'autres propriétés de la police comme la taille, le style, etc. */
+   
+}
+
+
+.main-section {
+      display: flex;
+      background-color: #3498db;
+      align-items: center;
+      border-radius: 0.625rem;
+      overflow: hidden;
+      box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.2);
+    }
+
+    .sub-section {
+      flex: 1;
+      
+      padding: 1.25rem;
+      border-radius: o.625rem;
+      overflow-y: auto;
+      background-color: #3498db;
+      box-shadow: 0 0 0.625 rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      
+    }
+
+
+    .circular-div {
+      width: 6.25;
+      height: 6.25;
+      background-color: #e74c3c;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 20px; 
+      }
+    
+      footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .paragraphe{
+        display: none;
+    }
+
+
+    .visible {
+      display: block;
+      width: 100%;
+    }
+  </style>
+
+<footer>
+    <p><a href="mailto:IC-USP@gmail.com">Contactez-nous :</a> IC-USP@gmail.com | 01, 01 BP 1800, Côte d’Ivoire, San Pedro</p>
+  <p>Suivez-nous sur nos reseaux sociaux:
+    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/monsite" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://chat.whatsapp.com/KA17X2adb7OJd4y58eF4Ys" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-snapchat"></i></a>
+  </p>
+  <p>&copy; 2024 IC-USP - Tous droits réservés.</p>
+</footer>
+</body>
+</html>
